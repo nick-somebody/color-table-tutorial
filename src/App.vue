@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div>
+    <h2>Nested</h2>
+    <nest-page></nest-page>
+    <h2>Slotted</h2>
+    <slot-page></slot-page>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import NestPage from "./components/nested/NestPage.vue";
+import SlotPage from "./components/slotted/SlotPage.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    NestPage,
+    SlotPage,
   }
 };
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

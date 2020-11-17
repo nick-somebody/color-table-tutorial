@@ -1,0 +1,56 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button {
+  background-color: white;
+  border: 1px solid lightgray;
+  &:hover {
+    background-color: lightgray;
+    border: 1px solid darkgray;
+  }
+  &:active {
+    background-color: darkgray;
+    border: 1px solid gray;
+  }
+  &.color-btn {
+    border: none;
+    font-size: 10px;
+  }
+}
+table {
+  border-collapse: collapse;
+  button {
+    height: 40px;
+    width: 100%;
+  }
+  thead {
+    tr {
+      th {
+        padding: 0;
+        border: 1px solid black;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border: 1px solid black;
+        height: 20px;
+        padding: 0;
+      }
+    }
+  }
+}
+.row {
+  margin: 5px;
+  .count {
+    margin: 0 5px;
+    display: inline-block;
+  }
+}
+.label {
+  display: inline-block;
+  width: 60px;
+}
