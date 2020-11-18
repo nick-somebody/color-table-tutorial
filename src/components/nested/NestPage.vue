@@ -98,10 +98,10 @@ export default {
       cell.g = g
       cell.b = b
     },
-    randomize(params) {
-      const hasRow = params.hasOwnProperty('rowIdx')
-      const hasCol = params.hasOwnProperty('colIdx')
-      const { rowIdx, colIdx } = params
+    randomize({ rowIdx, colIdx }) {
+      const hasRow = rowIdx === 0 || !!rowIdx
+      const hasCol = colIdx === 0 || !!colIdx
+
       if (hasRow && hasCol) {
         this.randomCell(rowIdx, colIdx)
       } else if (hasRow) {

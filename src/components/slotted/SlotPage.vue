@@ -12,32 +12,32 @@
       <div class="count">{{ columns.length }}</div>
       <button type="button" @click="remCol">-</button>
     </div>
-    <color-table>
-      <color-table-head :columns="columns">
-        <template v-slot:all>
-          <button type="button" @click="randomGrid()">
-            Randomise all
-          </button>
-        </template>
-        <template v-slot:column="{ column: { colIdx } }">
-          <button type="button" @click="randomColumn(colIdx)">
-            Randomise column
-          </button>
-        </template>
-      </color-table-head>
-      <color-table-body :grid="grid">
-        <template v-slot:control="{ row: { rowIdx } }">
-          <button type="button" @click="randomRow(rowIdx)">
-            Randomize Row
-          </button>
-        </template>
-        <template v-slot:cell="{ cell: { rowIdx, colIdx, color } }">
-          <button class="color-btn" type="button" @click="randomCell(rowIdx, colIdx)" :style="color">
-            {{ color.backgroundColor }}
-          </button>
-        </template>
-      </color-table-body>
-    </color-table>
+<color-table>
+  <color-table-head :columns="columns">
+    <template v-slot:all>
+      <button type="button" @click="randomGrid()">
+        Randomise all
+      </button>
+    </template>
+    <template v-slot:column="{ column: { colIdx } }">
+      <button type="button" @click="randomColumn(colIdx)">
+        Randomise column
+      </button>
+    </template>
+  </color-table-head>
+  <color-table-body :grid="grid">
+    <template v-slot:control="{ row: { rowIdx } }">
+      <button type="button" @click="randomRow(rowIdx)">
+        Randomize Row
+      </button>
+    </template>
+    <template v-slot:cell="{ cell: { rowIdx, colIdx, color } }">
+      <button class="color-btn" type="button" @click="randomCell(rowIdx, colIdx)" :style="color">
+        {{ color.backgroundColor }}
+      </button>
+    </template>
+  </color-table-body>
+</color-table>
   </div>
 </template>
 
