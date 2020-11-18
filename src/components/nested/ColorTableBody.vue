@@ -2,10 +2,10 @@
   <tbody>
     <tr v-for="(row, rowIdx) in grid" :key="rowIdx">
       <td>
-        <button type="button" @click="randomize({rowIdx})">Randomize Row</button>
+        <button type="button" @click="randomise({rowIdx})">Randomise Row</button>
       </td>
       <td v-for="(col, colIdx) in row" :key="colIdx">
-        <button type="button" class="color-btn" :style="color(col)" @click="randomize({ rowIdx, colIdx })">
+        <button type="button" class="color-btn" :style="color(col)" @click="randomise({ rowIdx, colIdx })">
           {{color(col).backgroundColor}}
         </button>
       </td>
@@ -18,8 +18,8 @@ export default {
   name: 'color-table-body',
   props: ['grid'],
   methods: {
-    randomize(params) {
-      this.$emit('randomize', params)
+    randomise(params) {
+      this.$emit('randomise', params)
     },
     color(col) {
       const {r, g, b} = col

@@ -1,9 +1,9 @@
 <template>
   <thead>
     <tr>
-      <th><button type="button" @click="randomize({})">Randomise all</button></th>
+      <th><button type="button" @click="randomise({})">Randomise all</button></th>
       <th v-for="(col, colIdx) in columns" :key="colIdx">
-        <button type="button" @click="randomize({ colIdx })">Randomise column</button>
+        <button type="button" @click="randomise({ colIdx })">Randomise column</button>
       </th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@ export default {
   name: 'color-table-head',
   props: ['columns'],
   methods: {
-    randomize(params) {
-      this.$emit('randomize', params)
+    randomise(params) {
+      this.$emit('randomise', params)
     }
   }
 }

@@ -28,7 +28,7 @@
   <color-table-body :grid="grid">
     <template v-slot:control="{ row: { rowIdx } }">
       <button type="button" @click="randomRow(rowIdx)">
-        Randomize Row
+        Randomise Row
       </button>
     </template>
     <template v-slot:cell="{ cell: { rowIdx, colIdx, color } }">

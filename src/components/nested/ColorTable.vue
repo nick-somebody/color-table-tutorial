@@ -1,7 +1,7 @@
 <template>
   <table>
-    <color-table-head :columns="columns" @randomize="randomize" />
-    <color-table-body :grid="grid" @randomize="randomize" />
+    <color-table-head :columns="columns" @randomise="randomise" />
+    <color-table-body :grid="grid" @randomise="randomise" />
   </table>
 </template>
 
@@ -17,8 +17,8 @@ export default {
   },
   props: ['grid', 'columns'],
   methods: {
-    randomize(params) {
-      this.$emit('randomize', params)
+    randomise(params) {
+      this.$emit('randomise', params)
     }
   },
 };

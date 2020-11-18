@@ -12,7 +12,7 @@
       <div class="count">{{ columns.length }}</div>
       <button type="button" @click="remCol">-</button>
     </div>
-    <color-table :grid="grid" :columns="columns" @randomize="randomize"></color-table>
+    <color-table :grid="grid" :columns="columns" @randomise="randomise"></color-table>
   </div>
 </template>
 
@@ -98,7 +98,7 @@ export default {
       cell.g = g
       cell.b = b
     },
-    randomize({ rowIdx, colIdx }) {
+    randomise({ rowIdx, colIdx }) {
       const hasRow = rowIdx === 0 || !!rowIdx
       const hasCol = colIdx === 0 || !!colIdx
 

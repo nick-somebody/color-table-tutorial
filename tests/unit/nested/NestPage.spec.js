@@ -11,7 +11,7 @@ describe('NestPage.vue', () => {
     return  shallowMount(NestPage)
   }
   
-  describe('randomize', () => {
+  describe('randomise', () => {
     const wrapper = wrapperMaker()
 
     
@@ -24,7 +24,7 @@ describe('NestPage.vue', () => {
     })
 
     it('should call randomCell when rowIdx and colIdx passed', () => {
-      wrapper.vm.randomize({rowIdx: 0, colIdx: 0})
+      wrapper.vm.randomise({rowIdx: 0, colIdx: 0})
       wrapper.vm.$forceUpdate()
       expect(randomCellSpy).toHaveBeenCalled()
       expect(randomRowSpy).not.toHaveBeenCalled()
@@ -32,21 +32,21 @@ describe('NestPage.vue', () => {
       expect(randomGridSpy).not.toHaveBeenCalled()
     })
     it('should call randomRow when rowIdx passed', () => {
-      wrapper.vm.randomize({rowIdx: 0})
+      wrapper.vm.randomise({rowIdx: 0})
       expect(randomCellSpy).not.toHaveBeenCalled()
       expect(randomRowSpy).toHaveBeenCalled()
       expect(randomColumnSpy).not.toHaveBeenCalled()
       expect(randomGridSpy).not.toHaveBeenCalled()
     })
     it('should call randomColumn when colIdx passed', () => {
-      wrapper.vm.randomize({colIdx: 0})
+      wrapper.vm.randomise({colIdx: 0})
       expect(randomCellSpy).not.toHaveBeenCalled()
       expect(randomRowSpy).not.toHaveBeenCalled()
       expect(randomColumnSpy).toHaveBeenCalled()
       expect(randomGridSpy).not.toHaveBeenCalled()
     })
     it('should call randomGrid when rowIdx and colIdx passed', () => {
-      wrapper.vm.randomize({})
+      wrapper.vm.randomise({})
       expect(randomCellSpy).not.toHaveBeenCalled()
       expect(randomRowSpy).not.toHaveBeenCalled()
       expect(randomColumnSpy).not.toHaveBeenCalled()
